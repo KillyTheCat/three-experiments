@@ -81,7 +81,14 @@ function rotate() {
     pivot.rotateY(0.02);
 }
 
+function rotateCamera() {
+    camera.rotateZ(0.1);
+}
+
 animate();
 
 const bg = document.querySelector('canvas');
 bg.onclick = rotate;
+
+const pg = document.querySelector('p');
+pg.onscroll = rotateCamera;
